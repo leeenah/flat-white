@@ -1,0 +1,184 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>☕️ Flat White</title>
+  </head>
+  <style>
+    body {
+      background-color: #f6f7eb;
+    }
+
+    h1 {
+      color: #393e41;
+      text-align: center;
+      padding: 20px 0 20px 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 40px;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #393e41;
+      text-align: justify;
+      padding: 0 200px 0 200px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: #393e41;
+      text-align: justify;
+      padding: 0 200px;
+      font-size: 14px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    p {
+      color: #393e41;
+      text-align: justify;
+      padding: 0 200px;
+      font-size: 14px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    ul {
+      color: #393e41;
+      text-align: justify;
+      padding: 0 200px;
+      margin: 0 30px;
+      font-size: 12px;
+      font-family: "Courier New", Courier, monospace;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+    }
+    hr {
+      border-color: #e94f37;
+      border-style: solid;
+      width: 70%;
+      margin-top: 20px;
+    }
+
+    footer {
+      color: #393e41;
+      text-align: center;
+      font-size: small;
+      font-family: "Courier New", Courier, monospace;
+      margin-bottom: 50px;
+    }
+    button {
+      color: #e94f37;
+      background: #f6f7eb;
+      border-style: solid;
+      border-radius: 8px;
+      border-color: #e94f37;
+      border-width: 3px;
+      font-size: 20px;
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      font-weight: bolder;
+      letter-spacing: 3mm;
+      outline: none; /* this hides the weird blue border on selection */
+      display: block;
+      margin: 30px auto 20px auto;
+      padding: 15px 40px;
+      transition: all 200ms ease-in-out;
+    }
+    button:hover {
+      color: #f6f7eb;
+      background: #e94f37;
+      cursor: pointer;
+    }
+
+    .latte {
+      color: #e94f37;
+    }
+    .cappuccino {
+      color: #e94f37;
+    }
+  </style>
+  <body>
+    <h1>☕️ Flat White Coffee</h1>
+    <br />
+
+    <img
+      src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1788&q=80"
+    />
+
+    <br />
+    <hr />
+
+    <h2>🤔 What is a flat white?</h2>
+    <p>
+      A flat white is an espresso drink with two shots of espresso with a layer
+      of frothy microfoam from steamed milk. It’s a smaller volume drink, and
+      though some like to compare it to a
+      <a
+        class="latte"
+        href="https://www.roastycoffee.com/latte/"
+        target="blank"
+        style="text-decoration: none"
+      >
+        <strong>latte</strong>
+      </a>
+      or a
+      <a
+        class="cappuccino"
+        href="https://www.roastycoffee.com/cappuccino/"
+        target="blank"
+        style="text-decoration: none"
+      >
+        <strong>cappuccino,</strong>
+      </a>
+      it has a decent amount of milk but only a little amount of foam,
+      technically microfoam.
+    </p>
+
+    <h2>😌 Who would like a flat white?</h2>
+    <p>
+      The flat white is perfect for people who don't like a lot of milk or extra
+      froth in their coffee. So if you're looking for a new, soothing drink to
+      start your day, the flat white is the way to go!
+    </p>
+    <h2>😎 Want to learn how to make a flat white?</h2>
+    <p>
+      Click on the button below to <em><strong>sign up</strong></em
+      >, and we will email you a tutorial video but before you do, here are the
+      ingredients you will need:
+    </p>
+
+    <h3><strong> Ingredients </strong></h3>
+    <ul>
+      <li>2 shot of your favourite coffee bean</li>
+      <li>4 oz milk</li>
+      <li>6 oz coffee cup</li>
+    </ul>
+
+    <button><strong>SIGN UP</strong></button>
+    <footer>This page was coded by Lena Zhang</footer>
+    <script>
+      function signUp() {
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+        let button = document.querySelector("button");
+        email = email.toLowerCase();
+
+        if (email.endsWith("@gmail.com")) {
+          alert("Thanks! Enjoy the tutorial, " + name + "!");
+          button.innerHTML = "THANK YOU";
+        } else {
+          alert(
+            "Sorry, we only accept Gmail accounts at the moment. Please try again."
+          );
+          button.innerHTML = "TRY AGAIN";
+        }
+      }
+      let signUpButton = document.querySelector("button");
+      signUpButton.addEventListener("click", signUp);
+    </script>
+  </body>
+</html>
